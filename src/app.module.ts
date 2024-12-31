@@ -5,6 +5,7 @@ import { DataSourceOptions } from 'typeorm';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/ormconfig';
 import { LocationModule } from './location/location.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { LocationModule } from './location/location.module';
       },
     }),
     LocationModule,
+    DatabaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],

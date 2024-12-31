@@ -23,7 +23,10 @@ export class Location {
   @Column('decimal', { precision: 10, scale: 3 })
   area: number;
 
-  @TreeParent()
+  @Column({ default: 'm2' })
+  area_unit: string;
+
+  @TreeParent({ onDelete: 'CASCADE' })
   @JoinColumn({ name: 'parent_id' })
   parent: Location;
 

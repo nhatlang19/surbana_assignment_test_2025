@@ -1,3 +1,4 @@
+import { Location } from '../location/entities/location.entity';
 import { DataSource } from 'typeorm';
 
 export const typeOrmConfig = new DataSource({
@@ -7,7 +8,7 @@ export const typeOrmConfig = new DataSource({
   username: process.env.DATABASE_USER || 'postgres',
   password: process.env.DATABASE_PASSWORD || '123456',
   database: process.env.DATABASE_NAME || 'location_db',
-  entities: ['dist/**/*.entity{.ts,.js}'],
+  entities: [Location],
   migrations: ['dist/migrations/*{.ts,.js}'],
   synchronize: true, // Set to false in production
   logging: true, // Optional, helpful for debugging,

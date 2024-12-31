@@ -1,0 +1,50 @@
+[
+  {
+    "name": "A",
+    "location_name": "Building A",
+    "area": 100.92,
+    "children": [
+      {
+        "name": "A-CarPark",
+        "location_name": "A-CarPark",
+        "area": 80.620
+      },
+      {
+        "name": "Level 1",
+        "location_name": "A-01",
+        "area": 100.920,
+        "children": [
+          {
+            "name": "Lobby Level 1",
+            "location_name": "A-01-Lobby",
+            "area": 50.110
+          },
+          {
+            "name": "Master Room",
+            "location_name": "A-01-01",
+            "area": 20.210
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "B",
+    "location_name": "Building B",
+    "area": 200,
+    "children": [
+      {
+        "name": "Level 5",
+        "location_name": "B-05",
+        "area": 150.000,
+        "children": [
+          {
+            "name": "Utility Room",
+            "location_name": "B-05-11",
+            "area": 10.000
+          }
+        ]
+      }
+    ]
+  }
+]
