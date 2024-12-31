@@ -17,5 +17,5 @@ export class CreateLocationDto {
 
   @ApiPropertyOptional({ description: 'Parent location ID' })
   @IsOptional()
-  parentId?: number;
+  parent_id?: number;
 }

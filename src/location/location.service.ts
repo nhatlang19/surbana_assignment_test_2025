@@ -34,14 +34,14 @@ export class LocationService {
 
     const location = this.locationRepository.create(createLocationDto);
 
-    if (createLocationDto.parentId) {
+    if (createLocationDto.parent_id) {
       const parent = await this.locationRepository.findOne({
-        where: { id: createLocationDto.parentId },
+        where: { id: createLocationDto.parent_id },
       });
 
       if (!parent) {
         throw new LocationNotFoundException(
-          `Parent location with ID ${createLocationDto.parentId} not found`,
+          `Parent location with ID ${createLocationDto.parent_id} not found`,
         );
       }
 
